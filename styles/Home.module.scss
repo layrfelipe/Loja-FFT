@@ -1,0 +1,67 @@
+.homeContainer {
+    height: 100vh;
+    width: 100%;
+    background: url('../public/images/slides/slide-assis.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.featuredProductsContainer {
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5rem;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logoContainer {
+            width: 5rem;
+        }
+
+        h3 {
+            text-align: center;
+            color: #346144;
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .products {
+        display: flex;
+        padding: 2rem 0 3rem 0;
+
+        .productWrapper {
+            margin: 0 1.5rem;
+            
+            a {
+
+                .productImageContainer {
+                    width: 15rem;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .productInfo {
+                    text-align: right;
+                    h2 {
+                        color: #72222f;
+                        font: 700 1.25rem Roboto;
+                    }
+
+                    p {
+                        color: #777777;
+                        font: 400 0.9rem Roboto;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

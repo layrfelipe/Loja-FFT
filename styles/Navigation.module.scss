@@ -1,0 +1,27 @@
+.navigationContainer {
+    background: #e9e8e7;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    a {
+        margin: 0 3rem;
+        padding: 3rem 0;
+
+        .description {
+            h3 {
+                color: #346144;
+                font-size: 1.15rem;
+            }
+
+             p {
+                 color: #b3b3b3;
+                 font-size: 0.9rem;
+             }
+        }
+
+        .navigationImageContainer {
+            width: 20rem;
+        }
+    }
+}
