@@ -41,6 +41,10 @@ export default function Header() {
                                 </div>
                                 /FANFARRAFESTIVATRICOLOR
                             </div>
+
+                            <div className={styles.logoContainerMobile}>
+                                    <Image src={logoInstagram} alt="EDITA ALT" />
+                            </div>
                         </a>
 
 
@@ -50,6 +54,10 @@ export default function Header() {
                                     <Image src={logoTwitter} alt="EDITA ALT" />
                                 </div>
                                 /FANFARRA_FT
+                            </div>
+
+                            <div className={styles.logoContainerMobile}>
+                                <Image src={logoTwitter} alt="EDITA ALT" />
                             </div>
                         </a>
                     </div>
