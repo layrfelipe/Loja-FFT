@@ -1,7 +1,7 @@
 @media (max-width: 640px) {
     .headerContainer {
         width: 100%;
-        background: grey;
+        background: white;
         position: absolute;
         top: 0;
         left: 0;
@@ -15,7 +15,7 @@
             .logoAndTextContainer {
 
                 .logoContainer {
-                    width: 20vw;
+                    width: 15vw;
 
                 }
 
@@ -32,14 +32,13 @@
         }
 
         .buttonContainer {
-            width: 15vw;
+            width: 12vw;
             filter: invert(31%) sepia(42%) saturate(447%) hue-rotate(89deg) brightness(92%) contrast(88%);
         }
     }
 }
 
 
-// por enquanto tudo pra desktop aqui
 @media (min-width: 1024px) {
     .headerContainer {
         position: absolute;

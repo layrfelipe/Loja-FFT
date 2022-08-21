@@ -21,9 +21,9 @@ export default function Home() {
         <title>FFT - Início</title>
       </Head>
       <Header />
-      {/* <div className={styles.homeContainer} /> */}
+      <div className={styles.homeContainer} />
 
-      {/* <div className={styles.featuredProductsContainer}>
+      <div className={styles.featuredProductsContainer}>
         <div className={styles.header}>
           <div className={styles.logoContainer}>
             <Image
@@ -107,7 +107,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* <Navigation />
       <Footer /> */}
