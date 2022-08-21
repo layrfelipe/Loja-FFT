@@ -5,8 +5,8 @@ import styles from '../styles/Footer.module.scss';
 
 import logoCoroa from '../public/images/logos/logo-coroa.png';
 
-// import logoInstagram from '../public/images/social/instagram.svg';
-// import logoTwitter from '../public/images/social/twitter.svg';
+import logoInstagram from '../public/images/social/instagram.svg';
+import logoTwitter from '../public/images/social/twitter.svg';
 
 export default function Header() {
 
@@ -35,10 +35,22 @@ export default function Header() {
 
                     <div className={styles.socialContainer}>
                         <a href="https://instagram.com/fanfarrafestivatricolor" target='_blank'>
-                            IG: /FANFARRAFESTIVATRICOLOR
+                            <div className={styles.logoAndTextContainer}>
+                                <div className={styles.logoContainer}>
+                                    <Image src={logoInstagram} alt="EDITA ALT" />
+                                </div>
+                                /FANFARRAFESTIVATRICOLOR
+                            </div>
                         </a>
+
+
                         <a href="https://twitter.com/fanfarra_ft" target='_blank'>
-                            TT: /FANFARRA_FT
+                            <div className={styles.logoAndTextContainer}>
+                                <div className={styles.logoContainer}>
+                                    <Image src={logoTwitter} alt="EDITA ALT" />
+                                </div>
+                                /FANFARRA_FT
+                            </div>
                         </a>
                     </div>
                 </div>

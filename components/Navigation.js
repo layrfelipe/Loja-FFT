@@ -15,7 +15,7 @@ export default function Navigation() {
     return (
         <div className={styles.navigationContainer}>
             <Link href='/mart'>
-                <a>
+                <a className={router.pathname == '/mart' ? styles.inactive : ''}>
                     <div className={styles.description}>
                         <h3>MOVIMENTO ARTÍSTICO TRICOLOR</h3>
                         <p>SAIBA MAIS...</p>
@@ -31,7 +31,7 @@ export default function Navigation() {
             </Link>
 
             <Link href='/loja'>
-                <a>
+                <a className={router.pathname == '/loja' ? styles.inactive : ''}>
                     <div className={styles.description}>
                         <h3>LOJA</h3>
                         <p>SAIBA MAIS...</p>
@@ -47,7 +47,7 @@ export default function Navigation() {
             </Link>
 
             <Link href='/sobre-nos'>
-                <a>
+                <a className={router.pathname == '/sobre-nos' ? styles.inactive : ''}>
                     <div className={styles.description}>
                         <h3>SOBRE A FFT</h3>
                         <p>SAIBA MAIS...</p>
