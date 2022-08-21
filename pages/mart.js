@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
+import Head from "next/head";
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -12,6 +13,9 @@ import logoMart from "../public/images/logos/logo-mart.png";
 export default function Mart() {
   return (
     <>
+      <Head>
+        <title>FFT - mArt</title>
+      </Head>
       <Header />
       <div className={styles.martContainer}>
         <div className={styles.header}>

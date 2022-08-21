@@ -21,7 +21,7 @@
     }
 
     .productsContainer {
-        padding: 2rem 7.5rem 3rem 7.5rem;
+        padding: 3rem 7.5rem 3rem 7.5rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         row-gap: 3rem;
@@ -35,9 +35,28 @@
 
             .productInfo {
                 text-align: right;
-                h2 {
-                    color: #72222f;
-                }
+                    h2 {
+                        color: #72222f;
+                        font: 900 1.3rem Roboto;
+                    }
+
+                    p {
+                        color: #909090;
+                        font: 500 0.9rem Roboto;
+                        margin-top: 0.2rem;
+                    }
+
+                    h3 {
+                        color: #808080;
+                        font: 900 1.1rem Roboto;
+                        margin-top: 0.2rem;
+                        text-decoration: line-through;
+                    }
+
+                    .preSale {
+                        color: #346144;
+                        text-decoration: none;
+                    }
             }
 
         }

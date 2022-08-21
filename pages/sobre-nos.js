@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -16,6 +17,9 @@ import textura from "../public/images/extras/textura-logos-brasao.png";
 export default function SobreNos() {
   return (
     <>
+      <Head>
+        <title>FFT - Sobre nós</title>
+      </Head>
       <Header />
       <div className={styles.sobreNosContainer}>
         <div className={styles.header}>
@@ -34,14 +38,14 @@ export default function SobreNos() {
 
           <p className={styles.plus}>+</p>
 
-          <div class={styles.logoContainer}>
+          <div className={styles.logoContainer}>
             <Image src={trombeta} alt="EDITAR ALT"/>
             <p className={styles.below}>TROMBETA</p>
           </div>
 
           <p className={styles.plus}>+</p>
 
-          <div class={styles.logoContainer}>
+          <div className={styles.logoContainer}>
             <p className={styles.above}>ESTANDARTE</p>
             <Image src={estandarte} alt="EDITAR ALT"/>
           </div>

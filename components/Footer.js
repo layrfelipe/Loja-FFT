@@ -34,7 +34,7 @@ export default function Header() {
                     <h4>FALE COM A GENTE</h4>
 
                     <div className={styles.socialContainer}>
-                        <a href="https://instagram.com/fanfarrafestivatricolor" target='_blank'>
+                        <a href="https://instagram.com/fanfarrafestivatricolor" target='_blank' rel="noreferrer">
                             <div className={styles.logoAndTextContainer}>
                                 <div className={styles.logoContainer}>
                                     <Image src={logoInstagram} alt="EDITA ALT" />
@@ -44,7 +44,7 @@ export default function Header() {
                         </a>
 
 
-                        <a href="https://twitter.com/fanfarra_ft" target='_blank'>
+                        <a href="https://twitter.com/fanfarra_ft" target='_blank' rel="noreferrer">
                             <div className={styles.logoAndTextContainer}>
                                 <div className={styles.logoContainer}>
                                     <Image src={logoTwitter} alt="EDITA ALT" />
@@ -58,7 +58,7 @@ export default function Header() {
 
             <div className={styles.copyrights}>
                 <p>2022 | Todos os direitos reservados © Fanfarra Festiva Tricolor</p>
-                <p>Site desenvolvido por <a href="https://linkedin.com/in/layr-felipe/" target="_blank">Layr Felipe</a></p>
+                <p>Site desenvolvido por <a href="https://linkedin.com/in/layr-felipe/" target="_blank" rel="noreferrer">Layr Felipe</a></p>
             </div>
         </div>
     )

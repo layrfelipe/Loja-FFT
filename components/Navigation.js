@@ -14,22 +14,6 @@ export default function Navigation() {
 
     return (
         <div className={styles.navigationContainer}>
-            <Link href='/mart'>
-                <a className={router.pathname == '/mart' ? styles.inactive : ''}>
-                    <div className={styles.description}>
-                        <h3>MOVIMENTO ARTÍSTICO TRICOLOR</h3>
-                        <p>SAIBA MAIS...</p>
-                    </div>
-
-                    <div className={styles.navigationImageContainer}>
-                        <Image
-                            src={posterCartola}
-                            alt="EDITAR ALT"
-                        />
-                    </div>
-                </a>
-            </Link>
-
             <Link href='/loja'>
                 <a className={router.pathname == '/loja' ? styles.inactive : ''}>
                     <div className={styles.description}>
@@ -40,6 +24,22 @@ export default function Navigation() {
                     <div className={styles.navigationImageContainer}>
                         <Image
                             src={posterLoja}
+                            alt="EDITAR ALT"
+                        />
+                    </div>
+                </a>
+            </Link>
+
+            <Link href='/mart'>
+                <a className={router.pathname == '/mart' ? styles.inactive : ''}>
+                    <div className={styles.description}>
+                        <h3>MOVIMENTO ARTÍSTICO TRICOLOR</h3>
+                        <p>SAIBA MAIS...</p>
+                    </div>
+
+                    <div className={styles.navigationImageContainer}>
+                        <Image
+                            src={posterCartola}
                             alt="EDITAR ALT"
                         />
                     </div>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
+import Head from "next/head";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -16,6 +17,9 @@ import camisaChicoGuanabara from "../public/images/products/camisa-chico-guanaba
 export default function Home() {
   return (
     <>
+    <Head>
+      <title>FFT - Início</title>
+    </Head>
       <Header />
       <div className={styles.homeContainer} />
 
