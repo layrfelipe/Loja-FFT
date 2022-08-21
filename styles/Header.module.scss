@@ -1,46 +1,76 @@
 @media (max-width: 640px) {
     .headerContainer {
-        width: 100%;
-        background: white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 12vh;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 .8rem;
+        .headerBar {
+            width: 100%;
+            background: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 12vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 .8rem;
 
-        a {
-            .logoAndTextContainer {
+            a {
+                .logoAndTextContainer {
 
-                .logoContainer {
-                    width: 15vw;
+                    .logoContainer {
+                        width: 15vw;
 
+                    }
+
+                    p {
+                        display: none;
+                        visibility: hidden;
+                    }
                 }
+            }
 
-                p {
-                    display: none;
-                    visibility: hidden;
+            .menu {
+                display: none;
+                visibility: hidden;
+            }
+
+            .buttonContainer {
+                width: 12vw;
+                filter: invert(31%) sepia(42%) saturate(447%) hue-rotate(89deg) brightness(92%) contrast(88%);
+            }
+        }
+
+        .burgerMenuOpen {
+            position: absolute;
+            top: 12vh;
+            left: 0;
+            width: 100%;
+            background: #346144;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                li {
+                    padding: 1rem;
+
+                    a {
+                        color: white;
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }
 
-        .menu {
+        .burgerMenuClosed {
             display: none;
             visibility: hidden;
-        }
-
-        .buttonContainer {
-            width: 12vw;
-            filter: invert(31%) sepia(42%) saturate(447%) hue-rotate(89deg) brightness(92%) contrast(88%);
         }
     }
 }
 
 
 @media (min-width: 1024px) {
-    .headerContainer {
+    .headerBar {
         position: absolute;
         top: 0;
         left: 0;
