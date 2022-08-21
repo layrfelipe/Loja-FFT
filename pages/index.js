@@ -109,8 +109,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <Navigation />
-      <Footer /> */}
+      <Navigation />
+      {/* <Footer /> */}
     </>
   )
 }
