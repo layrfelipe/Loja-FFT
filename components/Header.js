@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 
 import styles from '../styles/Header.module.scss';
 import logo from '../public/images/logos/logo-brasao.png'
+import burger from '../public/images/social/burger.svg';
 
 export default function Header() {
 
@@ -31,6 +32,10 @@ export default function Header() {
                 <Link href='/mart'><li className={router.pathname == '/mart' ? styles.active : styles.inactive}>mArt</li></Link>
                 <Link href='/sobre-nos'><li className={router.pathname == '/sobre-nos' ? styles.active : styles.inactive}>Sobre nós</li></Link>
             </ul>
+
+            <div className={styles.buttonContainer}>
+                <Image src={burger} alt="EDITAR ALT" layout='responsive'/>
+            </div>
         </div>
     )
 }

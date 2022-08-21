@@ -17,13 +17,13 @@ import camisaChicoGuanabara from "../public/images/products/camisa-chico-guanaba
 export default function Home() {
   return (
     <>
-    <Head>
-      <title>FFT - Início</title>
-    </Head>
+      <Head>
+        <title>FFT - Início</title>
+      </Head>
       <Header />
-      <div className={styles.homeContainer} />
+      {/* <div className={styles.homeContainer} /> */}
 
-      <div className={styles.featuredProductsContainer}>
+      {/* <div className={styles.featuredProductsContainer}>
         <div className={styles.header}>
           <div className={styles.logoContainer}>
             <Image
@@ -107,10 +107,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <Navigation />
-      <Footer />
+      {/* <Navigation />
+      <Footer /> */}
     </>
   )
 }

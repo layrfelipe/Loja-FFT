@@ -1,56 +1,105 @@
-.headerContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: white;
-    width: 100%;
-    height: 12vh;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 12rem 0.75rem 6rem;
-    
-    a {
+@media (max-width: 640px) {
+    .headerContainer {
+        width: 100%;
+        background: grey;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 12vh;
         display: flex;
-        color: #346144;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 .8rem;
 
-        .logoAndTextContainer {
+        a {
+            .logoAndTextContainer {
+
+                .logoContainer {
+                    width: 20vw;
+
+                }
+
+                p {
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        .menu {
+            display: none;
+            visibility: hidden;
+        }
+
+        .buttonContainer {
+            width: 15vw;
+            filter: invert(31%) sepia(42%) saturate(447%) hue-rotate(89deg) brightness(92%) contrast(88%);
+        }
+    }
+}
+
+
+// por enquanto tudo pra desktop aqui
+@media (min-width: 1024px) {
+    .headerContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: white;
+        width: 100%;
+        height: 12vh;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 12rem 0.75rem 6rem;
+        
+        a {
+            display: flex;
+            color: #346144;
+
+            .logoAndTextContainer {
+                display: flex;
+                align-items: center;
+        
+                .logoContainer{
+                    width: 4rem;
+                    margin-right: .75rem;
+                }
+
+                p {
+                    font: 700 1rem Roboto;
+                }
+            }
+
+        }
+
+        .menu {
             display: flex;
             align-items: center;
-    
-            .logoContainer{
-                width: 4rem;
-                margin-right: .75rem;
+
+            li {
+                margin-right: 4rem;
+                font: 500 1.2rem Roboto;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
             }
 
-            p {
-                font: 700 1rem Roboto;
+            .active {
+                color: #72222f;
+            }
+
+            .inactive {
+                color: #b3b3b3;
+            }
+
+            li:hover {
+                color: #777777;
+                transition: all .6s ease-in-out;
             }
         }
 
-    }
-
-    .menu {
-        display: flex;
-        align-items: center;
-
-        li {
-            margin-right: 4rem;
-            font: 500 1.2rem Roboto;
-            cursor: pointer;
-            transition: all .2s ease-in-out;
-        }
-
-        .active {
-            color: #72222f;
-        }
-
-        .inactive {
-            color: #b3b3b3;
-        }
-
-        li:hover {
-            color: #777777;
-            transition: all .6s ease-in-out;
+        .buttonContainer {
+            display: none;
+            visibility: hidden;
         }
     }
 }
