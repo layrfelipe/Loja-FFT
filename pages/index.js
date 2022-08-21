@@ -8,7 +8,10 @@ import Navigation from "../components/Navigation";
 import styles from "../styles/Home.module.scss";
 
 import logoBrasao from "../public/images/logos/logo-brasao.png";
+import camisaFutSemPreconceito from "../public/images/products/camisa-futebol-sem-preconceito.jpg"
 import camisaAssis from "../public/images/products/camisa-assis.jpg";
+import camisaCartola from "../public/images/products/camisa-cartola.jpg";
+import camisaChicoGuanabara from "../public/images/products/camisa-chico-guanabara.jpg";
 
 export default function Home() {
   return (
@@ -33,13 +36,14 @@ export default function Home() {
               <a>
                 <div className={styles.productImageContainer}>
                   <Image
-                    src={camisaAssis}
+                    src={camisaFutSemPreconceito}
                     alt='EDITAR ALT'
                   />
                 </div>
                 <div className={styles.productInfo}>
-                    <h2>CAMISA ALGODÃO</h2>
-                    <p>RECORDAR É VIVER | ASSIS</p>
+                    <h2>CAMISA JOGO</h2>
+                    <p>FUTEBOL SEM PRECONCEITO</p>
+                    <h3>ESGOTADO</h3>
                 </div>
               </a>
             </Link>
@@ -57,6 +61,7 @@ export default function Home() {
                 <div className={styles.productInfo}>
                     <h2>CAMISA ALGODÃO</h2>
                     <p>RECORDAR É VIVER | ASSIS</p>
+                    <h3>ESGOTADO</h3>
                 </div>
               </a>
             </Link>
@@ -67,13 +72,14 @@ export default function Home() {
               <a>
                 <div className={styles.productImageContainer}>
                   <Image
-                    src={camisaAssis}
+                    src={camisaCartola}
                     alt='EDITAR ALT'
                   />
                 </div>
                 <div className={styles.productInfo}>
                     <h2>CAMISA ALGODÃO</h2>
-                    <p>RECORDAR É VIVER | ASSIS</p>
+                    <p>GRANDES SÃO OS OUTROS | CARTOLA</p>
+                    <h3 className={styles.preSale}>PRÉ-VENDA</h3>
                 </div>
               </a>
             </Link>
@@ -84,13 +90,14 @@ export default function Home() {
               <a>
                 <div className={styles.productImageContainer}>
                   <Image
-                    src={camisaAssis}
+                    src={camisaChicoGuanabara}
                     alt='EDITAR ALT'
                   />
                 </div>
                 <div className={styles.productInfo}>
-                    <h2>CAMISA ALGODÃO</h2>
-                    <p>RECORDAR É VIVER | ASSIS</p>
+                    <h2>CAMISA JOGO</h2>
+                    <p>NOVEMBRO PRETO</p>
+                    <h3>ESGOTADO</h3>
                 </div>
               </a>
             </Link>

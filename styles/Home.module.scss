@@ -34,7 +34,7 @@
 
     .products {
         display: flex;
-        padding: 2rem 0 3rem 0;
+        padding: 3rem 0 3rem 0;
 
         .productWrapper {
             margin: 0 1.5rem;
@@ -51,12 +51,25 @@
                     text-align: right;
                     h2 {
                         color: #72222f;
-                        font: 700 1.25rem Roboto;
+                        font: 900 1.3rem Roboto;
                     }
 
                     p {
-                        color: #777777;
-                        font: 400 0.9rem Roboto;
+                        color: #909090;
+                        font: 500 0.9rem Roboto;
+                        margin-top: 0.2rem;
+                    }
+
+                    h3 {
+                        color: #808080;
+                        font: 900 1.1rem Roboto;
+                        margin-top: 0.2rem;
+                        text-decoration: line-through;
+                    }
+
+                    .preSale {
+                        color: #346144;
+                        text-decoration: none;
                     }
                 }
             }
