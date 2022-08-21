@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styles from '../styles/Footer.module.scss';
 
@@ -14,7 +15,11 @@ export default function Header() {
             <div className={styles.footerMainContent}>
                 <div className={styles.leftSection}>
                     <div className={styles.logoContainer}>
-                        <Image src={logoCoroa} alt='EDITAR ALT' />
+                        <Link href='/'>
+                            <a>
+                                <Image src={logoCoroa} alt='EDITAR ALT' />
+                            </a>
+                        </Link>
                     </div>
                 </div>
                 

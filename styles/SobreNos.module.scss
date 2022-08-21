@@ -1,0 +1,60 @@
+.sobreNosContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #ababab;
+    margin-top: 12vh;
+    padding: 2rem 0 4rem 0;
+
+    .header {
+        display: flex;
+        align-items: center;
+        padding-bottom: 2rem;
+
+        .logoContainer {
+            width: 8rem;
+            display: flex;
+            flex-direction: column;
+            margin: 0 2.5rem;
+
+            p {
+                font: 700 1.25rem Roboto;
+                text-align: center;
+                color: #346144;
+            }
+
+            .below {
+                margin-top: 1rem;
+            }
+
+            .above {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .plus {
+            font: 500 3rem Roboto;
+            color: #346144;
+        }
+    }
+
+    .textContainer {
+        padding: 0 8rem 4rem 8rem;
+
+        p {
+            color: #346144;
+            font: 400 1.1rem Roboto;
+        }
+    }
+
+    .logos {
+        display: flex;
+        width: 85%;
+
+        .logoContainer {
+            margin: 0 3rem;
+        }
+
+    }
+}

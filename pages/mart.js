@@ -27,7 +27,7 @@ export default function Mart() {
         <div className={styles.text}>
           <p>
             <span className={styles.miniHeader}>A SOCIEDADE E O FUTEBOL</span>
-            <br />
+            <br /><br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
             justo congue, egestas augue id, malesuada tortor. Orci varius
             natoque penatibus et magnis dis parturient montes, nascetur
@@ -51,7 +51,7 @@ export default function Mart() {
             tristique congue.
           </p>
       
-          <br /><br />
+          <br />
 
           <p>
             MISSÃO:
@@ -78,7 +78,7 @@ export default function Mart() {
             aliquet tristique nunc, in tempor elit tristique congue.
           </p>
 
-          <br /><br />
+          <br /><br /><br />
 
           <h2>FAÇA P<span id="arte">ARTE</span> DO MOVIMENTO!</h2>
           <p>
