@@ -24,14 +24,14 @@ export default function SobreNos() {
       <div className={styles.sobreNosContainer}>
         <div className={styles.header}>
 
-          <div class={styles.logoContainer}>
+          <div className={styles.logoContainer}>
             <Image src={logoFluSimples} alt="EDITAR ALT"/>
             <p className={styles.below}>FLUMINENSE<br/>FOOTBALL<br/>CLUB</p>
           </div>
 
           <p className={styles.plus}>+</p>
 
-          <div class={styles.logoContainer}>
+          <div className={styles.logoContainer}>
             <p className={styles.above}>TROMPETE</p>
             <Image src={trompete} alt="EDITAR ALT"/>
           </div>
