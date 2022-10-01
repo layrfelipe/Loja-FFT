@@ -102,7 +102,7 @@ export default function SobreNos() {
             <Image src={logoCoroaCamo} alt="EDITAR ALT"/>
           </div>
 
-          <div className={styles.logoContainer}>
+          <div className={styles.logoContainer} id={styles.textura}>
             <Image src={textura} alt="EDITAR ALT"/>
           </div>
         </div>

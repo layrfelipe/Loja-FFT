@@ -1,0 +1,211 @@
+@media (max-width: 640px) {
+    .productContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 12vh;
+        border-top: 1px solid #ababab;
+        padding-bottom: 5vh;
+
+        .info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 4vh;
+            padding: 0 2vh;
+
+            .imageContainer {
+                width: 100%;
+                border: 1px solid #72222f;
+            }
+
+            .details {
+                width: 100%;
+                margin-left: 2vw;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                h3 {
+                    font: 400 1.1rem Roboto;
+                    color: #818181;
+                    margin-top: 4vh;
+                    width: 90%;
+                }
+
+                h2 {
+                    font: 900 2rem Roboto;
+                    color: #72222f;
+                    margin-top: 1vh;
+                }
+
+                h5 {
+                    font: 900 1.5rem Roboto;
+                    color: #346144;
+                    margin-top: 1vh;
+                }
+
+                p {
+                    font: 400 1rem Roboto;
+                    color: #346144;
+                    margin-top: 1.5vh;
+                }
+
+                a {
+                    background: #346144;
+                    font: 900 1.25rem Roboto;
+                    color: white;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 1vh;
+                    cursor: pointer;
+                    margin-top: 5vh;
+                    text-decoration: none;
+                }
+
+                .esgotado {
+                    background: grey;
+                    cursor: default;
+                }
+
+                #warning {
+                    font: 500 1rem Roboto;
+                    color: #72222f;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0 5vw;
+            margin-top: 5vh;
+
+            hr {
+                width: 50%;
+                margin-bottom: 2vh;
+                height: 1vh;
+                background: #72222f;
+                border: none;
+            }
+
+            h4 {
+                font: 700 1.6rem Roboto;
+                color: #5c5c5c;
+            }
+
+            p {
+                font: 400 1.1rem Roboto;
+                color: #346144;
+                margin-top: 1vh;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .productContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4vh;
+        border-top: 1px solid #ababab;
+        padding-bottom: 7.5vh;
+
+        .info {
+            width: 100%;
+            display: flex;
+            padding: 0 5vw;
+            margin-top: 5vh;
+
+            .imageContainer {
+                width: 35vw;       
+                box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);      
+            }
+
+            .details {
+                width: 35vw;
+                margin-left: 2vw;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                h3 {
+                    font: 400 1.1rem Roboto;
+                    color: #818181;
+                }
+
+                h2 {
+                    font: 900 2rem Roboto;
+                    color: #72222f;
+                    margin-top: 1vh;
+                }
+
+                h5 {
+                    font: 900 1.5rem Roboto;
+                    color: #346144;
+                    margin-top: 1vh;
+                }
+
+                p {
+                    font: 400 1rem Roboto;
+                    color: #346144;
+                    margin-top: 1.5vh;
+                }
+
+                a {
+                    background: #346144;
+                    font: 900 1.25rem Roboto;
+                    color: white;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 1vh;
+                    cursor: pointer;
+                    margin-top: 5vh;
+                    text-decoration: none;
+                }
+
+                .esgotado {
+                    background: grey;
+                    cursor: default;
+                }
+
+                #warning {
+                    font: 500 1rem Roboto;
+                    color: #72222f;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0 5vw;
+            margin-top: 7.5vh;
+
+            hr {
+                width: 20vw;
+                margin-bottom: 2vh;
+                height: 1vh;
+                background: #72222f;
+                border: none;
+            }
+
+            h4 {
+                font: 700 1.6rem Roboto;
+                color: #5c5c5c;
+            }
+
+            p {
+                font: 400 1.1rem Roboto;
+                color: #346144;
+                margin-top: 1vh;
+            }
+        }
+    }
+}

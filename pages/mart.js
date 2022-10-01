@@ -58,7 +58,7 @@ export default function Mart() {
           <br />
 
           <p>
-            MISSÃO:
+            <span>MISSÃO:</span>
             <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
             justo congue, egestas augue id, malesuada tortor. Orci varius
@@ -66,7 +66,7 @@ export default function Mart() {
             aliquet tristique nunc, in tempor elit tristique congue.
             <br />
             <br />
-            VISÃO:
+            <span>VISÃO:</span>
             <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
             justo congue, egestas augue id, malesuada tortor. Orci varius
@@ -74,7 +74,7 @@ export default function Mart() {
             aliquet tristique nunc, in tempor elit tristique congue.
             <br />
             <br />
-            VALORES:
+            <span>VALORES:</span>
             <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
             justo congue, egestas augue id, malesuada tortor. Orci varius

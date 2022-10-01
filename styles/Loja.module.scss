@@ -1,40 +1,52 @@
-.lojaContainer {
-    width: 100%;
-
-    .header {
-        margin-top: 12vh;
-        border-top: 1px solid #ababab;
-        display: flex;
+@media (max-width: 640px) {
+    .lojaContainer {
+        width: 100%;
         flex-direction: column;
         align-items: center;
 
-        .logoContainer {
-            width: 5rem;
-            margin-top: 2.5rem;
-        }
+        .header {
+            margin-top: 12vh;
+            border-top: 1px solid #ababab;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-        h3 {
-            margin-top: 1rem;
-            font: 700 1.8rem Roboto;
-            color: #346144;
-        }
-    }
-
-    .productsContainer {
-        padding: 3rem 7.5rem 3rem 7.5rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        row-gap: 3rem;
-        place-items: center;
-
-
-        a {
-            .imageContainer {
-                width: 15rem;
+            .logoContainer {
+                width: 5rem;
+                margin-top: 2.5rem;
             }
 
-            .productInfo {
-                text-align: right;
+            h3 {
+                margin-top: 1rem;
+                font: 700 1.8rem Roboto;
+                color: #346144;
+            }
+        }
+
+        .productsContainer {
+            padding: 1vh 0 5vh 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 7.5vh;
+                width: 90%;
+
+                .imageContainer {
+                    width: 70%;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .productInfo {
+                    text-align: right;
+                    width: 70%;
+
                     h2 {
                         color: #72222f;
                         font: 900 1.3rem Roboto;
@@ -57,8 +69,92 @@
                         color: #346144;
                         text-decoration: none;
                     }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .lojaContainer {
+        width: 100%;
+
+        .header {
+            margin-top: 4vh;
+            border-top: 1px solid #ababab;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .logoContainer {
+                width: 5rem;
+                margin-top: 2.5rem;
             }
 
+            h3 {
+                margin-top: 1rem;
+                font: 700 1.8rem Roboto;
+                color: #346144;
+            }
+        }
+
+        .productsContainer {
+            padding: 3rem 7.5rem 3rem 7.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            row-gap: 8vh;
+            place-items: center;
+
+
+            a {
+                width: 15vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1vw;
+
+                .imageContainer {
+                    width: 15vw;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .productInfo {
+                    text-align: right;
+                    align-self: flex-end;
+
+                    h2 {
+                        color: #72222f;
+                        font: 900 1.3rem Roboto;
+                    }
+
+                    p {
+                        color: #909090;
+                        font: 500 0.9rem Roboto;
+                        margin-top: 0.2rem;
+                    }
+
+                    h3 {
+                        color: #808080;
+                        font: 900 1.1rem Roboto;
+                        margin-top: 0.2rem;
+                        text-decoration: line-through;
+                    }
+
+                    .preSale {
+                        color: #346144;
+                        text-decoration: none;
+                    }
+                }
+
+            }
+
+            a:hover {
+                box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+                cursor: pointer;
+                transition: box-shadow 0.3s ease-in-out;
+            }
         }
     }
 }
