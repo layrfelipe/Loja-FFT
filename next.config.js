@@ -3,9 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
-  images: {
-    domains: ['images.prismic.io'],
-  },
 }
 
 module.exports = nextConfig
