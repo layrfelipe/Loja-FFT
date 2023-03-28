@@ -1,22 +1,18 @@
-import { createClient } from "../../prismic-configuration";
 import Image from 'next/image';
 import Head from "next/head";
 
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
-import Navigation from "../../components/Navigation";
+import NavigationHelper from "../../components/NavigationHelper";
 
 import styles from "../../styles/Product.module.scss";
 
-export default function Product({product}) {
-    let esgotado = (product.data.status == "esgotado")
-    esgotado = !esgotado
+import products from '../../database/products';
 
-    const handleClickOrder = () => {
-        if (esgotado) return
-
-        alert("vai pro zap")
-    }
+export default function Product({ product }) {
+    const productName = product.name.replaceAll(" ", "%20").replaceAll("#", "").toUpperCase()
+    const productCategory = product.category.toUpperCase()
+    const wppURL = `https://wa.me/5521969000446?text=Olá,%20Fanfarra!%20Eu%20gostaria%20de%20realizar%20uma%20compra:%20${productCategory}%20${productName}.`
 
     return (
         <>
@@ -30,7 +26,7 @@ export default function Product({product}) {
                 <div className={styles.info}>
                     <div className={styles.imageContainer}>
                         <Image
-                            src={product.data.image_1.url}
+                            src={product.image_path}
                             alt='EDITAR ALT'
                             width={1200}
                             height={1000}
@@ -38,12 +34,16 @@ export default function Product({product}) {
                     </div>
 
                     <div className={styles.details}>
-                        <h3>Home/Loja/{product.data.category.toUpperCase()}</h3>
-                        <h2>{product.data.name}</h2>
-                        <h5>R${product.data.price}</h5>
-                        <p>{product.data.headline}</p>
-                        <p>{product.data.concept[0].text}</p>
-                        <a className={esgotado ? styles.esgotado : ""} href={esgotado ? "" : "https://wa.me/5521969000446"} target="_blank" rel="noreferrer">ENCOMENDAR VIA ZAP</a>
+                        <h3>Home/Loja/{product.category.toUpperCase()}</h3>
+                        <h2>{product.name}</h2>
+                        <h5>R${product.price}</h5>
+                        <p>{product.headline}</p>
+                        <p id={styles.concept}>{product.concept}</p>
+                        {product.status == "esgotado" ?
+                            <button className={styles.esgotado}>ESGOTADO</button>
+                            :
+                            <a className={styles.disponivel} href={wppURL} target="_blank" rel="noreferrer">COMPRAR PELO WHATSAPP</a>
+                        }
                         <p id={styles.warning}>*Em breve, vendas direto no site!</p>
                     </div>
                 </div>
@@ -51,19 +51,38 @@ export default function Product({product}) {
                 <div className={styles.description}>
                     <hr />
                     <h4>Descrição do produto</h4>
-                    <p>{product.data.description}</p>
+                    <p>{product.description}</p>
                 </div>
             </div>
 
-            <Navigation />
+            <NavigationHelper />
             <Footer />
         </>
     )
 }
 
-export async function getServerSideProps(context) {
-    const client = createClient()
-    const product = await client.getByUID("product", context.query.product)
+export async function getStaticPaths() {
+    let paths = []
+
+    products.forEach( (item) => {
+        paths.push({
+            params: {
+                product: item.uid.toString()
+            }
+        })
+    })
+
+    return {
+        paths,
+        fallback: true
+    }
+}
+
+export async function getStaticProps(context) {
+    let productUID = context.params.product;
+    let product = products.filter((p) => {
+        return p.uid == productUID
+    })[0]
 
     return {
         props: {

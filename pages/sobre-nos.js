@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Navigation from "../components/Navigation";
+import NavigationHelper from "../components/NavigationHelper";
 
 import styles from "../styles/SobreNos.module.scss";
 
@@ -107,7 +107,7 @@ export default function SobreNos() {
           </div>
         </div>
       </div>
-      <Navigation />
+      <NavigationHelper />
       <Footer />
     </>
   )

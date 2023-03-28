@@ -1,10 +1,9 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import Head from "next/head";
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import Navigation from "../components/Navigation";
+import NavigationHelper from "../components/NavigationHelper";
 
 import styles from "../styles/Mart.module.scss";
 
@@ -58,7 +57,7 @@ export default function Mart() {
           <br />
 
           <p>
-            <span>MISSÃO:</span>
+            <span className={styles.miniMiniHeader}>MISSÃO:</span>
             <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
             justo congue, egestas augue id, malesuada tortor. Orci varius
@@ -66,7 +65,7 @@ export default function Mart() {
             aliquet tristique nunc, in tempor elit tristique congue.
             <br />
             <br />
-            <span>VISÃO:</span>
+            <span className={styles.miniMiniHeader}>VISÃO:</span>
             <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
             justo congue, egestas augue id, malesuada tortor. Orci varius
@@ -74,7 +73,7 @@ export default function Mart() {
             aliquet tristique nunc, in tempor elit tristique congue.
             <br />
             <br />
-            <span>VALORES:</span>
+            <span className={styles.miniMiniHeader}>VALORES:</span>
             <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
             justo congue, egestas augue id, malesuada tortor. Orci varius
@@ -94,7 +93,7 @@ export default function Mart() {
         </div>
       </div>
 
-      <Navigation />
+      <NavigationHelper />
       <Footer />
     </>
   )

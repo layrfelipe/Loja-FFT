@@ -1,4 +1,4 @@
-import { createClient } from "../prismic-configuration";
+import { useRef } from 'react';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -6,21 +6,65 @@ import Head from "next/head";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Navigation from "../components/Navigation";
+import NavigationHelper from "../components/NavigationHelper";
 
 import styles from "../styles/Home.module.scss";
 
 import logoBrasao from "../public/images/logos/logo-brasao.png";
 
-export default function Home({ products }) {
+import products from '../database/products';
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { Autoplay, Pagination, Navigation } from "swiper";
+
+import { CaretLeft, CaretRight } from "@phosphor-icons/react";
+
+export default function Home() {
+  const swiperRef = useRef();
+
   return (
     <>
       <Head>
         <title>FFT - Início</title>
       </Head>
+      
       <Header />
-      <div className={styles.homeContainer} />
-      <div className={styles.homeContainerMobile}><h2>#RECORDARÉVIVER</h2></div>
+
+      <div className={styles.homeContainer}>
+        <Swiper
+          onBeforeInit={(swiper) => { swiperRef.current = swiper }}
+          slidesPerView={1}
+          spaceBetween={5}
+          centeredSlides={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: true,
+          }}
+          pagination={false}
+          loop={true}
+          navigation={false}
+          modules={[Autoplay, Pagination, Navigation]}
+          className={styles.mySwiper}
+        >
+          <SwiperSlide className={styles.slide} id={styles.slideOne}>
+            <CaretLeft className={styles.caretLeft} color="white" size={50} onClick={() => swiperRef.current.slidePrev()}>Prev</CaretLeft>
+            <CaretRight className={styles.caretRight} color="white" size={50} onClick={() => swiperRef.current.slideNext()}>Prev</CaretRight>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide} id={styles.slideTwo}>
+            <CaretLeft className={styles.caretLeft} color="white" size={50} onClick={() => swiperRef.current.slidePrev()}>Prev</CaretLeft>
+            <CaretRight className={styles.caretRight} color="white" size={50} onClick={() => swiperRef.current.slideNext()}>Prev</CaretRight>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide} id={styles.slideThree}>
+            <CaretLeft className={styles.caretLeft} color="white" size={50} onClick={() => swiperRef.current.slidePrev()}>Prev</CaretLeft>
+            <CaretRight className={styles.caretRight} color="white" size={50} onClick={() => swiperRef.current.slideNext()}>Prev</CaretRight>
+          </SwiperSlide>
+        </Swiper>
+      </div>
 
       <div className={styles.featuredProductsContainer}>
         <div className={styles.header}>
@@ -35,7 +79,6 @@ export default function Home({ products }) {
 
         <div className={styles.products}>
 
-
           {
             products.slice(0, 4).map( (product) => {
                 return(
@@ -44,16 +87,16 @@ export default function Home({ products }) {
                       <a>
                         <div className={styles.productImageContainer}>
                           <Image
-                            src={product.data.image_1.url}
+                            src={product.image_path}
                             alt='EDITAR ALT'
                             width={1200}
                             height={1000}
                           />
                         </div>
                         <div className={styles.productInfo}>
-                            <h2>{product.data.name.toUpperCase()}</h2>
-                            <p>{product.data.headline}</p>
-                            <h3>{product.data.status.toUpperCase()}</h3>
+                            <h2>{product.name.toUpperCase()}</h2>
+                            <p>{product.headline}</p>
+                            <h3>{product.status.toUpperCase()}</h3>
                         </div>
                       </a>
                     </Link>
@@ -61,22 +104,12 @@ export default function Home({ products }) {
                 );
             })
           }
+
         </div>
       </div>
 
-      <Navigation />
+      <NavigationHelper />
       <Footer />
     </>
   )
-}
-
-export async function getServerSideProps(context) {
-  const client = createClient()
-  const products = await client.getAllByType("product")
-
-  return {
-      props: {
-          products: products
-      }
-  }
 }

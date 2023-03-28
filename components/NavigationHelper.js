@@ -2,19 +2,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-import styles from '../styles/Navigation.module.scss';
+import styles from '../styles/NavigationHelper.module.scss';
 
 import posterCartola from '../public/images/extras/poster-cartola.jpg';
 import posterLoja from '../public/images/extras/logo-com-bg-camo.jpg';
 import posterAtaque from '../public/images/extras/ataque-maracana.jpg';
 
-export default function Navigation() {
+export default function NavigationHelper() {
 
     const router = useRouter();
 
     return (
         <div className={styles.navigationContainer}>
-            <Link href='/loja'>
+            <Link href='/loja' id="m">
                 <a className={router.pathname == '/loja' ? styles.inactive : ''}>
                     <div className={styles.description}>
                         <h3>LOJA</h3>
@@ -64,5 +64,3 @@ export default function Navigation() {
         </div>
     )
 }
-
-

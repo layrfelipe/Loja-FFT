@@ -65,7 +65,7 @@ export default function Header() {
             </div>
 
             <div className={styles.copyrights}>
-                <p>2022 | Todos os direitos reservados © Fanfarra Festiva Tricolor</p>
+                <p>2023 | Todos os direitos reservados © Fanfarra Festiva Tricolor</p>
                 <p>Site desenvolvido por <a href="https://linkedin.com/in/layr-felipe/" target="_blank" rel="noreferrer">Layr Felipe</a></p>
             </div>
         </div>

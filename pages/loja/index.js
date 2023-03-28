@@ -1,17 +1,18 @@
-import { createClient } from "../../prismic-configuration";
 import Link from 'next/link';
 import Image from 'next/image';
 import Head from "next/head";
 
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
-import Navigation from "../../components/Navigation";
+import NavigationHelper from "../../components/NavigationHelper";
 
 import styles from "../../styles/Loja.module.scss";
 
 import logoBrasao from "../../public/images/logos/logo-brasao.png";
 
-export default function Loja({ products }) {
+import products from '../../database/products';
+
+export default function Loja() {
   return (
     <>
       <Head>
@@ -38,7 +39,7 @@ export default function Loja({ products }) {
                   <a>
                     <div className={styles.imageContainer}>
                       <Image
-                        src={product.data.image_1.url}
+                        src={product.image_path}
                         alt='EDITAR ALT'
                         width={1200}
                         height={1000}
@@ -46,10 +47,10 @@ export default function Loja({ products }) {
                     </div>
 
                     <div className={styles.productInfo}>
-                      <h2>{product.data.name.toUpperCase()}</h2>
-                      <p>{product.data.headline}</p>
-                      <p>R${product.data.price}</p>
-                      <h3>{product.data.status.toUpperCase()}</h3>
+                      <h2>{product.name.toUpperCase()}</h2>
+                      <p>{product.headline}</p>
+                      <p>R${product.price}</p>
+                      {product.status == "esgotado" && <h3>{product.status.toUpperCase()}</h3>}
                     </div>
                   </a>
                 </Link>
@@ -57,40 +58,16 @@ export default function Loja({ products }) {
             })
           }
 
-
-          {/* <Link href='/loja'>
-            <a>
-              <div className={styles.imageContainer}>
-                <Image
-                  src={camisaFutSemPreconceito}
-                  alt='EDITAR ALT'
-                />
-              </div>
-
-              <div className={styles.productInfo}>
-                <h2>CAMISA JOGO</h2>
-                <p>FUTEBOL SEM PRECONCEITO</p>
-                <p>R$100</p>
-                <h3>ESGOTADO</h3>
-              </div>
-            </a>
-          </Link> */}
         </div>
-
       </div>
-      <Navigation />
+      <NavigationHelper />
       <Footer />
     </>
   )
 }
 
-export async function getServerSideProps(context) {
-  const client = createClient()
-  const products = await client.getAllByType("product")
-
+export async function getStaticProps(context) {
   return {
-      props: {
-          products: products
-      }
+      props: {}
   }
 }

@@ -3,10 +3,10 @@
         width: 100%;
         flex-direction: column;
         align-items: center;
+        border-top: 1px solid #ababab;
 
         .header {
-            margin-top: 12vh;
-            border-top: 1px solid #ababab;
+            margin-top: 2vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -29,7 +29,6 @@
             flex-direction: column;
             align-items: center;
 
-
             a {
                 display: flex;
                 flex-direction: column;
@@ -50,18 +49,18 @@
                     h2 {
                         color: #72222f;
                         font: 900 1.3rem Roboto;
+                        margin: .5vh 0;
                     }
 
                     p {
                         color: #909090;
-                        font: 500 0.9rem Roboto;
-                        margin-top: 0.2rem;
+                        font: 500 1rem Roboto;
+                        margin: .5vh 0;
                     }
 
                     h3 {
                         color: #808080;
-                        font: 900 1.1rem Roboto;
-                        margin-top: 0.2rem;
+                        font: 900 1.2rem Roboto;
                         text-decoration: line-through;
                     }
 
@@ -79,13 +78,14 @@
 @media (min-width: 1024px) {
     .lojaContainer {
         width: 100%;
+        background: white;
 
         .header {
-            margin-top: 4vh;
             border-top: 1px solid #ababab;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-top: 1.25rem;
 
             .logoContainer {
                 width: 5rem;
@@ -104,35 +104,37 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             row-gap: 8vh;
-            place-items: center;
-
+            width: 100%;
 
             a {
-                width: 15vw;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: 1vw;
+                width: 18vw;
 
                 .imageContainer {
-                    width: 15vw;
+                    width: 16vw;
                     margin: 0;
-                    padding: 0;
+                    padding-top: 1vh;
                 }
 
                 .productInfo {
                     text-align: right;
                     align-self: flex-end;
+                    margin-top: 2vh;
+                    width: 16vw;
+                    padding-right: 1vw;
 
                     h2 {
+                        width: 100%;
                         color: #72222f;
-                        font: 900 1.3rem Roboto;
+                        font: 900 1.2rem Roboto;
                     }
 
                     p {
                         color: #909090;
                         font: 500 0.9rem Roboto;
-                        margin-top: 0.2rem;
+                        margin: 0.3rem 0;
                     }
 
                     h3 {

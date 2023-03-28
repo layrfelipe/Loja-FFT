@@ -1,25 +1,55 @@
 @media (max-width: 640px) {
     .homeContainer {
-        display: none;
-        visibility: hidden;
-    }
-
-    .homeContainerMobile {
-        height: 100vh;
+        height: 85vh;
         width: 100%;
-        background: url('../public/images/slides/slide-assis-mobile.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         display: flex;
-        align-items: flex-end;
-        justify-content: center;
+        
+        .mySwiper {
+            width: 100%;
+            height: 100%;
 
-        h2 {
-            font: 900 2.5rem Roboto;
-            color: white;
-            margin-bottom: 2rem;
-            background: #346144;
+            .slide {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                .caretLeft {
+                    margin-left: 1vw;
+                    cursor: pointer;
+                }
+
+                .caretRight {
+                    margin-right: 1vw;
+                    cursor: pointer;
+                }
+            }
+
+            #slideOne {
+                width: 100%;
+                height: 100%;
+                background: url('../public/images/slides/slide-assis-mobile.jpg');
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #slideTwo {
+                width: 100%;
+                height: 100%;
+                background: url('../public/images/slides/slide-cartola-mobile.jpg');
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #slideThree {
+                width: 100%;
+                height: 100%;
+                background: url('../public/images/slides/slide-torcida-mobile.jpg');
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
         }
     }
 
@@ -74,6 +104,7 @@
                         text-align: right;
                         width: 80%;
                         margin-top: 1rem;
+
                         h2 {
                             color: #72222f;
                             font: 900 1.5rem Roboto;
@@ -81,8 +112,8 @@
 
                         p {
                             color: #909090;
-                            font: 500 0.9rem Roboto;
-                            margin-top: 0.2rem;
+                            font: 500 1rem Roboto;
+                            margin: .5vh;
                         }
 
                         h3 {
@@ -104,18 +135,58 @@
 }
 
 @media (min-width: 1024px) {
-    .homeContainerMobile {
-        display: none;
-        visibility: hidden;
-    }
-
     .homeContainer {
-        height: 100vh;
+        height: 85vh;
         width: 100%;
-        background: url('../public/images/slides/slide-assis.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        display: flex;
+        
+        .mySwiper {
+            width: 100%;
+            height: 100%;
+
+            .slide {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                .caretLeft {
+                    margin-left: 1vw;
+                    cursor: pointer;
+                }
+
+                .caretRight {
+                    margin-right: 1vw;
+                    cursor: pointer;
+                }
+            }
+
+            #slideOne {
+                width: 100%;
+                height: 100%;
+                background: url('../public/images/slides/slide-assis.jpg');
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #slideTwo {
+                width: 100%;
+                height: 100%;
+                background: url('../public/images/slides/slide-cartola.jpg');
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #slideThree {
+                width: 100%;
+                height: 100%;
+                background: url('../public/images/slides/slide-torcida.jpg');
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
     }
 
     .featuredProductsContainer {
@@ -124,7 +195,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 2.5rem;
+        padding-top: 5rem;
 
         .header {
             display: flex;
@@ -145,20 +216,22 @@
 
         .products {
             display: flex;
-            padding: 3rem 0 3rem 0;
+            padding: 3rem 0;
 
             .productWrapper {
                 margin: 0 2.5vw;
-                width: 15vw;
-                padding: 1vw;
+                width: 17.5vw;
+                padding: .5vw;
                 
                 a {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    justify-content: flex-end;
+                    width: 100%;
 
                     .productImageContainer {
-                        width: 15vw;
+                        width: 100%;
                         margin: 0;
                         padding: 0;
                     }
@@ -166,6 +239,8 @@
                     .productInfo {
                         align-self: flex-end;
                         text-align: right;
+                        margin-top: 1vh; 
+
                         h2 {
                             color: #72222f;
                             font: 900 1.3rem Roboto;

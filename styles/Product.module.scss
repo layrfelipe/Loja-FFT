@@ -4,8 +4,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 12vh;
-        border-top: 1px solid #ababab;
+        border-top: 1px solid hsl(0, 0%, 67%);
         padding-bottom: 5vh;
 
         .info {
@@ -14,16 +13,14 @@
             flex-direction: column;
             align-items: center;
             margin-top: 4vh;
-            padding: 0 2vh;
+            padding: 0 5vw;
 
             .imageContainer {
                 width: 100%;
-                border: 1px solid #72222f;
             }
 
             .details {
                 width: 100%;
-                margin-left: 2vw;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -31,24 +28,24 @@
                 h3 {
                     font: 400 1.1rem Roboto;
                     color: #818181;
-                    margin-top: 4vh;
+                    margin-top: 3vh;
                     width: 90%;
                 }
 
                 h2 {
-                    font: 900 2rem Roboto;
+                    font: 900 1.75rem Roboto;
                     color: #72222f;
-                    margin-top: 1vh;
+                    margin-top: 1.5vh;
                 }
 
                 h5 {
-                    font: 900 1.5rem Roboto;
+                    font: 900 1.75rem Roboto;
                     color: #346144;
-                    margin-top: 1vh;
+                    margin-top: 1.5vh;
                 }
 
                 p {
-                    font: 400 1rem Roboto;
+                    font: 400 1.1rem Roboto;
                     color: #346144;
                     margin-top: 1.5vh;
                 }
@@ -70,6 +67,33 @@
                     cursor: default;
                 }
 
+                #concept {
+                    margin-top: 2vh;
+                }
+
+                .disponivel {
+                    background: #346144;
+                    font: 900 1.25rem Roboto;
+                    color: white;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    margin-top: 5vh;
+                    text-decoration: none;
+                    padding: 1.25vh 4vw;
+                }
+
+                .esgotado {
+                    background: #878787;
+                    font: 900 1.25rem Roboto;
+                    color: white;
+                    border: none;
+                    border-radius: 10px;
+                    margin-top: 5vh;
+                    text-decoration: none;
+                    padding: 1vh 1.5vw;
+                }
+
                 #warning {
                     font: 500 1rem Roboto;
                     color: #72222f;
@@ -87,7 +111,7 @@
             hr {
                 width: 50%;
                 margin-bottom: 2vh;
-                height: 1vh;
+                height: .75vh;
                 background: #72222f;
                 border: none;
             }
@@ -112,9 +136,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 4vh;
         border-top: 1px solid #ababab;
-        padding-bottom: 7.5vh;
+        padding-top: 3vh;
+        padding-bottom: 10vh;
 
         .info {
             width: 100%;
@@ -123,13 +147,15 @@
             margin-top: 5vh;
 
             .imageContainer {
-                width: 35vw;       
-                box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);      
+                width: 30vw;
+                height: 30vw;
+                box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+                position: relative;
             }
 
             .details {
                 width: 35vw;
-                margin-left: 2vw;
+                margin-left: 4vw;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -152,26 +178,36 @@
                 }
 
                 p {
-                    font: 400 1rem Roboto;
+                    font: 400 1.1rem Roboto;
                     color: #346144;
                     margin-top: 1.5vh;
                 }
 
-                a {
+                #concept {
+                    margin-top: 5vh;
+                }
+
+                .disponivel {
                     background: #346144;
                     font: 900 1.25rem Roboto;
                     color: white;
                     border: none;
                     border-radius: 10px;
-                    padding: 1vh;
                     cursor: pointer;
                     margin-top: 5vh;
                     text-decoration: none;
+                    padding: 2vh 1.5vw;
                 }
 
                 .esgotado {
-                    background: grey;
-                    cursor: default;
+                    background: #878787;
+                    font: 900 1.25rem Roboto;
+                    color: white;
+                    border: none;
+                    border-radius: 10px;
+                    margin-top: 5vh;
+                    text-decoration: none;
+                    padding: 1vh 1.5vw;
                 }
 
                 #warning {
@@ -186,7 +222,7 @@
             display: flex;
             flex-direction: column;
             padding: 0 5vw;
-            margin-top: 7.5vh;
+            margin-top: 5vh;
 
             hr {
                 width: 20vw;
@@ -197,7 +233,7 @@
             }
 
             h4 {
-                font: 700 1.6rem Roboto;
+                font: 700 1.5rem Roboto;
                 color: #5c5c5c;
             }
 
