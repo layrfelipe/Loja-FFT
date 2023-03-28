@@ -66,6 +66,73 @@
     }
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+    .headerContainer {
+        .headerBar {
+            width: 100%;
+            background: white;
+            height: 12vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 .8rem;
+
+            a {
+                .logoAndTextContainer {
+
+                    .logoContainer {
+                        width: 15vw;
+
+                    }
+
+                    p {
+                        display: none;
+                        visibility: hidden;
+                    }
+                }
+            }
+
+            .menu {
+                display: none;
+                visibility: hidden;
+            }
+
+            .buttonContainer {
+                width: 12vw;
+                filter: invert(31%) sepia(42%) saturate(447%) hue-rotate(89deg) brightness(92%) contrast(88%);
+            }
+        }
+
+        .burgerMenuOpen {
+            position: absolute;
+            top: 12vh;
+            left: 0;
+            width: 100%;
+            background: #264932;
+            z-index: 1000;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                li {
+                    padding: 1rem;
+
+                    a {
+                        color: white;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .burgerMenuClosed {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
 
 @media (min-width: 1024px) {
     .headerBar {

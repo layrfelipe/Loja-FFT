@@ -74,6 +74,81 @@
     }
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+    .lojaContainer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid #ababab;
+
+        .header {
+            margin-top: 2vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .logoContainer {
+                width: 5rem;
+                margin-top: 2.5rem;
+            }
+
+            h3 {
+                margin-top: 1rem;
+                font: 700 1.8rem Roboto;
+                color: #346144;
+            }
+        }
+
+        .productsContainer {
+            padding: 1vh 0 5vh 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 7.5vh;
+                width: 90%;
+
+                .imageContainer {
+                    width: 70%;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .productInfo {
+                    text-align: right;
+                    width: 70%;
+
+                    h2 {
+                        color: #72222f;
+                        font: 900 1.3rem Roboto;
+                        margin: .5vh 0;
+                    }
+
+                    p {
+                        color: #909090;
+                        font: 500 1rem Roboto;
+                        margin: .5vh 0;
+                    }
+
+                    h3 {
+                        color: #346144;
+                        font: 900 1.1rem Roboto;
+                        margin-top: 0.2rem;
+                    }
+
+                    .esgotado {
+                        color: #808080;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 1024px) {
     .lojaContainer {

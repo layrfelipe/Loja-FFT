@@ -40,6 +40,48 @@
     }
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+    .sobreNosContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        border-top: 1px solid #ababab;
+        padding-bottom: 7.5vh;
+
+        .header {
+            display: none;
+            visibility: hidden;
+        }
+
+        .textContainer {
+            margin-top: 2rem;
+            width: 90%;
+
+            p {
+                color: #346144;
+                font: 400 1.1rem Roboto;
+                text-align: left;
+            }
+        }
+
+        .logos {
+            display: flex;
+            margin-top: 3vh;
+            width: 70%;
+
+            .logoContainer {
+                margin: 0 3rem;
+            }
+
+            #textura {
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
 @media (min-width: 1024px) {
     .sobreNosContainer {
         width: 100%;

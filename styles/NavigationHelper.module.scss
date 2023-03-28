@@ -33,6 +33,41 @@
     }
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+    .navigationContainer {
+        border-top: 2px solid rgb(197, 197, 197);
+        background: #e9e8e7;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+
+        .inactive {
+            display: none;
+            visibility: hidden;
+        }
+
+        a {
+            margin: 0 3rem;
+            margin: 1.5rem 4rem;
+
+            .description {
+                h3 {
+                    color: #346144;
+                    font: 900 1.25rem Roboto;
+                }
+
+                p {
+                    color: #7a7a7a;
+                    font-size: 1rem;
+                    margin: .5vh 0;
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 1024px) {    
     .navigationContainer {
         background: #e9e8e7;

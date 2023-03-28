@@ -114,6 +114,122 @@
     }
 }
 
+@media (min-width: 640px) and (max-width: 1023px){
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .footerMainContent {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background: #72222f;
+            padding: 1.5rem 0;
+            
+            .leftSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .logoContainer {
+                    width: 10rem;
+                }
+            }
+
+            .rightSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 1rem 1rem;
+
+                h2 {
+                    font: 900 1.5rem Roboto;
+                    color: white;
+                }
+
+                p {
+                    background: #346144;
+                    font: 500 0.85rem Roboto;
+                    color: white;
+                    margin-top: 2rem;
+                    line-height: 1.1rem;
+                    padding: .5rem;
+                    display: none;
+                    visibility: hidden;
+                }
+
+                h3, h4 {
+                    color: white;
+                }
+
+                h3 {
+                    margin-top: 2rem;
+                    font: 700 1.25rem Roboto;
+                    display: none;
+                    visibility: hidden;
+                }
+
+                h4 {
+                    margin-top: 2.5rem;
+                    font: 700 1.25rem Roboto;
+                }
+
+                .socialContainer {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 1rem;
+                    justify-content: center;
+                    align-items: center;
+
+                    .logoAndTextContainer {
+                        display: none;
+                        visibility: hidden;
+                    }
+
+                    a {
+                        color: white;
+                    }
+
+                    .logoContainerMobile {
+                        width: 2.5rem;
+                        filter: invert(100%) sepia(0%) saturate(7458%) hue-rotate(133deg) brightness(99%) contrast(103%);
+                        margin: 0 .85rem;
+                    }
+                }
+            }
+
+        }
+
+        .copyrights {
+            background:#346144;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1vh 5vw;
+
+            p {
+                color: white;
+                font: 400 1rem Roboto;
+                text-align: center;
+
+                a {
+                    color: white;
+                    font: 400 1rem Roboto;
+                    text-decoration: underline;
+                }
+            }
+
+            p:not(:first-child) {
+                margin-top: 1vh;
+            }
+        }
+    }
+}
+
 @media (min-width: 1024px) {    
     .footerContainer {
         display: flex;

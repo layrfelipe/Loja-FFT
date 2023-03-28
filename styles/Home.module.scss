@@ -133,6 +133,141 @@
     }
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+    .homeContainer {
+        height: 85vh;
+        width: 100%;
+        display: flex;
+        
+        .mySwiper {
+            width: 100%;
+            height: 100%;
+
+            .slide {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                .caretLeft {
+                    margin-left: 1vw;
+                    cursor: pointer;
+                }
+
+                .caretRight {
+                    margin-right: 1vw;
+                    cursor: pointer;
+                }
+            }
+
+            #slideOne {
+                width: 100%;
+                height: 100%;
+                background: url('../public/images/slides/slide-assis-mobile.jpg');
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #slideTwo {
+                width: 100%;
+                height: 100%;
+                background: url('../public/images/slides/slide-cartola-mobile.jpg');
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #slideThree {
+                width: 100%;
+                height: 100%;
+                background: url('../public/images/slides/slide-torcida-mobile.jpg');
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+
+    .featuredProductsContainer {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        align-items: center;
+        padding-top: 2rem;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .logoContainer {
+                width: 5rem;
+            }
+
+            h3 {
+                text-align: center;
+                color: #346144;
+                font-size: 1.75rem;
+                margin-top: 4vh;
+                margin-bottom: -1vh;
+            }
+        }
+
+        .products {
+            display: flex;
+            flex-direction: column;
+            padding: 1vh 0 7.5vh 0;
+            align-items: center;
+
+            .productWrapper {
+                width: 90%;
+                margin-top: 7.5vh;
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+
+                    .productImageContainer {
+                        margin: 0;
+                        padding: 0;
+                        width: 80%;
+                    }
+
+                    .productInfo {
+                        text-align: right;
+                        width: 80%;
+                        margin-top: 1rem;
+
+                        h2 {
+                            color: #72222f;
+                            font: 900 1.5rem Roboto;
+                        }
+
+                        p {
+                            color: #909090;
+                            font: 500 1rem Roboto;
+                            margin: .5vh;
+                        }
+
+                        h3 {
+                            color: #346144;
+                            font: 900 1.2rem Roboto;
+                            margin-top: 0.2rem;
+                        }
+
+                        .esgotado {
+                            color: #808080;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 1024px) {
     .homeContainer {
         height: 85vh;
