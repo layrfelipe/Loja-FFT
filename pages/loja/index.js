@@ -10,9 +10,9 @@ import styles from "../../styles/Loja.module.scss";
 
 import logoBrasao from "../../public/images/logos/logo-brasao.png";
 
-import products from '../../database/products';
+import { getAllProducts } from '../../lib/database';
 
-export default function Loja() {
+export default function Loja({ products }) {
   return (
     <>
       <Head>
@@ -67,7 +67,11 @@ export default function Loja() {
 }
 
 export async function getStaticProps(context) {
+  const products = getAllProducts();
+
   return {
-      props: {}
+      props: {
+          products: products
+      }
   }
 }

@@ -12,7 +12,7 @@ import styles from "../styles/Home.module.scss";
 
 import logoBrasao from "../public/images/logos/logo-brasao.png";
 
-import products from '../database/products';
+import { getAllProducts } from '../lib/database';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -24,7 +24,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 import { CaretLeft, CaretRight } from "@phosphor-icons/react";
 
-export default function Home() {
+export default function Home({ products }) {
   const swiperRef = useRef();
 
   return (
@@ -112,4 +112,14 @@ export default function Home() {
       <Footer />
     </>
   )
+}
+
+export async function getStaticProps(context) {
+  const products = getAllProducts();
+
+  return {
+      props: {
+          products: products
+      }
+  }
 }

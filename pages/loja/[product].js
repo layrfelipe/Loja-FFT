@@ -7,7 +7,7 @@ import NavigationHelper from "../../components/NavigationHelper";
 
 import styles from "../../styles/Product.module.scss";
 
-import products from '../../database/products';
+import { getProductByUID, getAllProductsUIDs } from '../../lib/database';
 
 export default function Product({ product }) {
     const productName = product.name.replaceAll(" ", "%20").replaceAll("#", "").toUpperCase()
@@ -28,8 +28,7 @@ export default function Product({ product }) {
                         <Image
                             src={product.image_path}
                             alt='EDITAR ALT'
-                            width={1200}
-                            height={1000}
+                            layout='fill'
                           />
                     </div>
 
@@ -63,26 +62,25 @@ export default function Product({ product }) {
 
 export async function getStaticPaths() {
     let paths = []
+    const products = getAllProductsUIDs();
 
     products.forEach( (item) => {
         paths.push({
             params: {
-                product: item.uid.toString()
+                product: item.toString()
             }
         })
     })
 
     return {
         paths,
-        fallback: true
+        fallback: false
     }
 }
 
 export async function getStaticProps(context) {
-    let productUID = context.params.product;
-    let product = products.filter((p) => {
-        return p.uid == productUID
-    })[0]
+    const productUID = context.params.product;
+    const product = getProductByUID(productUID);
 
     return {
         props: {
