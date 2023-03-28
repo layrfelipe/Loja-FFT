@@ -6,7 +6,6 @@
         align-items: center;
 
         .header {
-            margin-top: 12vh;
             border-top: 1px solid #ababab;
             display: flex;
             flex-direction: column;
@@ -49,6 +48,8 @@
             h2 {
                 color: #346144;
                 font: 600 1.5rem Roboto;
+                text-align: left;
+                width: 90%;
             }
 
             span {
