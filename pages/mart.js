@@ -9,6 +9,8 @@ import styles from "../styles/Mart.module.scss";
 
 import logoMart from "../public/images/logos/logo-mart.png";
 
+import { InstagramLogo, Envelope } from "@phosphor-icons/react"
+
 export default function Mart() {
   return (
     <>
@@ -84,10 +86,13 @@ export default function Mart() {
           <br /><br /><br />
 
           <h2>FAÇA P<span id="arte">ARTE</span> DO MOVIMENTO!</h2>
-          <p>
-              @MOVIMENTOARTISTICOTRICOLOR
-              <br />
-              movimentoartisticotricolor@gmail.com
+
+          <p className={styles.social} id={styles.first}>
+              <InstagramLogo color="#346144"/><a href="https://instagram.com/movimentoartisticotricolor" target='_blank' rel="noreferrer">MOVIMENTOARTISTICOTRICOLOR</a>
+          </p>
+
+          <p className={styles.social}>
+              <Envelope color="#346144"/>movimentoartisticotricolor@gmail.com
           </p>
 
         </div>

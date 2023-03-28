@@ -50,7 +50,7 @@ export default function Loja({ products }) {
                       <h2>{product.name.toUpperCase()}</h2>
                       <p>{product.headline}</p>
                       <p>R${product.price}</p>
-                      {product.status == "esgotado" && <h3>{product.status.toUpperCase()}</h3>}
+                      <h3 className={product.status == "esgotado" ? styles.esgotado : ""}>{product.status.toUpperCase()}</h3>
                     </div>
                   </a>
                 </Link>

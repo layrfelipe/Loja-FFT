@@ -1,7 +1,7 @@
 @media (max-width: 640px) {
     .martContainer {
         width: 100%;
-        padding-bottom: 1.5rem;
+        padding-bottom: 3rem;
         flex-direction: column;
         align-items: center;
 
@@ -31,18 +31,18 @@
             flex-direction: column;
             width: 100%;
             align-items: center;
+            margin-top: 4vh;
 
             p {
                 font: 400 1.1rem Roboto;
-                margin-top: 1rem;
                 color: #346144;
                 text-align: left;
                 width: 90%;
-                margin-top: 4vh;
+                margin-top: 1.5vh;
 
                 .miniHeader {
                     font: 700 1.5rem Roboto;
-
+                    color: #346144;
                 }
             }
 
@@ -55,6 +55,26 @@
                 color: #72222f;
                 font: 600 1.5rem Roboto;
                 text-align: left;
+            }
+
+            .social {
+                font: 400 1.1rem Roboto;
+                color: #346144;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                padding-left: 1vw;
+                margin: 0;
+            }
+
+            #first {
+                margin: 2vh 0 1vh 0;
+
+                a {
+                    text-decoration: none;
+                    color: #346144;
+                    font-weight: 400;
+                }
             }
         }
     }
@@ -98,7 +118,6 @@
                 margin-top: 1rem;
                 color: #346144;
                 text-align: left;
-
             }
             
             .miniMiniHeader {
@@ -118,6 +137,25 @@
             span {
                 color: #72222f;
                 font: 600 1.4rem Roboto;
+            }
+
+            .social {
+                font: 400 1.1rem Roboto;
+                color: #346144;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                margin: 0;
+            }
+
+            #first {
+                margin: 2vh 0 1vh 0;
+
+                a {
+                    text-decoration: none;
+                    color: #346144;
+                    font-weight: 400;
+                }
             }
         }
     }

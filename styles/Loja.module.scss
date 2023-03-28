@@ -59,14 +59,14 @@
                     }
 
                     h3 {
-                        color: #808080;
-                        font: 900 1.2rem Roboto;
-                        text-decoration: line-through;
+                        color: #346144;
+                        font: 900 1.1rem Roboto;
+                        margin-top: 0.2rem;
                     }
 
-                    .preSale {
-                        color: #346144;
-                        text-decoration: none;
+                    .esgotado {
+                        color: #808080;
+                        text-decoration: line-through;
                     }
                 }
             }
@@ -138,15 +138,14 @@
                     }
 
                     h3 {
-                        color: #808080;
+                        color: #346144;
                         font: 900 1.1rem Roboto;
                         margin-top: 0.2rem;
-                        text-decoration: line-through;
                     }
 
-                    .preSale {
-                        color: #346144;
-                        text-decoration: none;
+                    .esgotado {
+                        color: #808080;
+                        text-decoration: line-through;
                     }
                 }
 
